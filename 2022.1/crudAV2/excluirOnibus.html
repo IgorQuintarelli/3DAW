@@ -1,0 +1,31 @@
+<html>
+<head>
+<script>
+    function excluirOnibus() {
+        let id = document.getElementById("id").value;
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "excluirOnibus.php?id=" + id , true);
+        xhttp.send();
+    }
+</script>
+</head>
+<body>
+<h1>Excluir Onibus</h1><br><br>
+
+<form>
+    id: <input type=text id="id" value=''> <br>
+
+    <button onclick="excluirOnibus();">Excluir</button> <br>
+</form>
+
+<div>
+    <a href="incluirOnibus.html">Incluir Onibus</a><br>
+    <a href="alterarOnibus.html">Alterar Onibus</a><br>
+    <a href="excluirOnibus.html">Excluir Onibus</a><br>
+    <a href="listarOnibus.html">Listar Onibus</a><br>
+    <a href="listarTodosOnibus.html">Listar Todos Onibus</a><br><br>
+</div>
+
+<br>
+</body>
+</html>

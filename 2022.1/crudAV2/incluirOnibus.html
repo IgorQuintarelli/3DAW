@@ -1,0 +1,45 @@
+<html>
+<head>
+<script>
+    function incluirOnibus() {
+        let id = document.getElementById("id").value;
+        let marca = document.getElementById("marca").value;
+        let modelo = document.getElementById("modelo").value;
+        let qtdAssentos = document.getElementById("qtdAssentos").value;
+        let temBanheiro = document.getElementById("temBanheiro").value;
+        let temArCondicionado = document.getElementById("temArCondicionado").value;
+        let chassi = document.getElementById("chassi").value;
+        let placa = document.getElementById("placa").value;
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "incluirOnibus.php?id=" + id + "&marca=" + marca + "&modelo=" + modelo + "&qtdAssentos=" + qtdAssentos + "&temBanheiro=" + temBanheiro + "&temArCondicionado=" + temArCondicionado + "&chassi=" + chassi + "&placa=" + placa, true);
+        xhttp.send();
+    }
+</script>
+</head>
+<body>
+<h1>Incluir Onibus</h1><br><br>
+
+<form>
+    id: <input type=text id="id" value=''> <br>
+    marca: <input type=text id="marca" value=''> <br>
+    modelo: <input type=text id="modelo" value=''> <br>
+    qtdAssentos: <input type=text id="qtdAssentos" value=''> <br>
+    temBanheiro: <input type=text id="temBanheiro" value=''> <br>
+    temArCondicionado: <input type=text id="temArCondicionado" value=''> <br>
+    chassi: <input type=text id="chassi" value=''> <br>
+    placa: <input type=text id="placa" value=''> <br>
+    <button onclick="incluirOnibus();">Incluir</button> <br>
+</form>
+
+<div>
+    <a href="incluirOnibus.html">Incluir Onibus</a><br>
+    <a href="alterarOnibus.html">Alterar Onibus</a><br>
+    <a href="excluirOnibus.html">Excluir Onibus</a><br>
+    <a href="listarOnibus.html">Listar Onibus</a><br>
+    <a href="listarTodosOnibus.html">Listar Todos Onibus</a><br><br>
+</div>
+
+<div id="resultado"></div>
+<br>
+</body>
+</html>
